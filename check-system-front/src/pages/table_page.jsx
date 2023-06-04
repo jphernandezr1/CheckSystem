@@ -36,7 +36,7 @@ function Table_page() {
         <div className="flex items-center justify-center h-screen">
         <div className="w-3/4 h-3/4 bg-gradient-to-b from-opacity-50 to-opacity-100">
             {clients.map((client) => (
-                <li class="h-fit">
+                <li className="h-fit">
                 <div>
                     <Clients
                     total_check={client.total_check}
