@@ -1,12 +1,12 @@
 import logo from './logo.svg';
-import './index.css';
+import './App.css';
 
 function App() {
   return (
     <section>
       <header class="bg-white space-y-4 p-4 sm:px-8 sm:py-6 lg:p-4 xl:px-8 xl:py-6">
         <div class="flex items-center justify-between">
-          <h2 class="font-semibold text-slate-900">Projects</h2>
+          <h2 class="font-semibold text-slate-900">Restaurant POS</h2>
           <a href="/new" class="hover:bg-blue-400 group flex items-center rounded-md bg-blue-500 text-white text-sm font-medium pl-2 pr-3 py-2 shadow-sm">
             <svg width="20" height="20" fill="currentColor" class="mr-2" aria-hidden="true">
               <path d="M10 5a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3H6a1 1 0 1 1 0-2h3V6a1 1 0 0 1 1-1Z" />
@@ -28,17 +28,17 @@ function App() {
               <div>
                 <dt class="sr-only">Title</dt>
                 <dd class="group-hover:text-white font-semibold text-slate-900">
-                  Rest
+                  project
                 </dd>
               </div>
               <div>
                 <dt class="sr-only">Category</dt>
-                <dd class="group-hover:text-blue-200">no lo se</dd>
+                <dd class="group-hover:text-blue-200">cat</dd>
               </div>
               <div class="col-start-2 row-start-1 row-end-3 sm:mt-4 lg:mt-0 xl:mt-4">
                 <dt class="sr-only">Users</dt>
                 <dd x-for="user in project.users" class="flex justify-end sm:justify-start lg:justify-end xl:justify-start -space-x-1.5">
-                  <img src="user.avatar" alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy"/>
+                  <img src="../public/mesa.png" alt="user.name" class="w-6 h-6 rounded-full bg-slate-100 ring-2 ring-white" loading="lazy"/>
                 </dd>
               </div>
             </dl>
@@ -54,7 +54,6 @@ function App() {
         </li>
       </ul>
     </section>
-
   );
 }
 
