@@ -11,7 +11,7 @@ function App() {
       <Nav/>
         <Routes>
           <Route exact path="/" element={<Tablespage/>} />
-          <Route exact path="table/:tableId" element={<Tablepage/>} />
+          <Route exact path="/table/:tableId" element={<Tablepage/>} />
           <Route path="*" element="Not Found" />
         </Routes>
     </BrowserRouter>
