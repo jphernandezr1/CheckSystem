@@ -2,23 +2,30 @@ import React, { useEffect } from "react";
 
 const AlertBox = ({ message, onClose }) => {
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const openTimer = setTimeout(() => {
       onClose();
-    }, 2000);
+    }, 1000);
 
-    return () => clearTimeout(timer);
+    const closeTimer = setTimeout(() => {
+      onClose();
+    }, 1000);
+
+    return () => {
+      clearTimeout(openTimer);
+      clearTimeout(closeTimer);
+    };
   }, [onClose]);
 
   return (
     <div className="fixed inset-0 flex items-center justify-center">
       <div className="bg-white p-4 rounded-lg shadow">
-        <div className="Row flex items-center mb-2">
+        <div className="flex items-center mb-2">
           <img
             src={`${process.env.PUBLIC_URL}/check.png`}
-            alt="Imagen Circular"
+            alt="Imagen"
             className="w-20 h-20 rounded-full mr-2"
           />
-          <p className="Row">{message}</p>
+          <p>{message}</p>
         </div>
       </div>
     </div>
