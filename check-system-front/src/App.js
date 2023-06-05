@@ -4,7 +4,6 @@ import Tables_page from "./pages/tables_page";
 import Table_page from "./pages/table_page";
 import Nav from "./pages/nav";
 
-
 function App() {
 
   return (
@@ -16,6 +15,7 @@ function App() {
           <Route path="*" element="Not Found" />
         </Routes>
     </BrowserRouter>
+    
   );
 }
 
