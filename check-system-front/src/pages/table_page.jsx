@@ -13,40 +13,56 @@ function Table_page() {
       "LOK90YTYrwvGG722wbLUzfFp4G7pXQK7MWqpq8NU5ElsJbHzmO2A96LP1Cb0X1MC",
   };
 
-  useEffect(() => {
-    const gettable = async () => {
-      const url = `https://dashing-squirrel-63.hasura.app/api/rest/table/${tableId}`;
-      await axios
-        .get(url, {
+  const gettable = async () => {
+    const url = `https://dashing-squirrel-63.hasura.app/api/rest/table/${tableId}`;
+    await axios
+      .get(url, {
+        headers: headers,
+      })
+      .then((res) => {
+        setUsers(res.data["table"][0].table_clients);
+      })
+      .catch((err) => {
+        alert("Error " + JSON.stringify(err));
+      });
+  };
+  
+  const handleCreateUser = async () => {
+    try {
+      const response = await axios.post(
+        "https://dashing-squirrel-63.hasura.app/api/rest/client",
+        {
+            id_table: tableId,
+        },
+        {
           headers: headers,
-        })
-        .then((res) => {
-          console.log(res.data["table"][0].table_clients);
-          setUsers(res.data["table"][0].table_clients);
-        })
-        .catch((err) => {
-          alert("Error " + JSON.stringify(err));
-        });
-    };
+        }
+      );
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+    gettable();
+  };
+  const handleCreateCheck = () => {};
+
+  useEffect(() => {
     gettable();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  const handleCreateUser = (e) => {};
-  const handleCreateCheck = () => {};
-
+  
   return (
     <div className="flex w-full h-full bg-white">
       <div className="flex flex-col justify-evenly items-center w-3/4 h-full p-6 bg-white">
-            <ul className="bg-white p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-sm leading-6">
-            {clients.map((client) => (
-                    <li key={client.id} className="h-full w-full">
-                        <div>
-                        <Clients total_check={client.total_check} />
-                        </div>
-                    </li>
-                    ))}
-            </ul>
+        <ul className="bg-white p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 text-sm leading-6">
+          {clients.map((client) => (
+            <li key={client.id} className="h-full w-full">
+              <div>
+                <Clients onUpdate={gettable} total_check={client.total_check} id={client.id} id_table={tableId} name={client.name}/>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
       <div className="flex flex-col items-center justify-evenly w-1/4 h-full p-6 text-gray-700">
         <ul className="bg-white p-4 sm:px-8 sm:pt-6 sm:pb-8 lg:p-4 xl:px-8 xl:pt-6 xl:pb-8 grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-1 xl:grid-cols-1 gap-4 text-sm leading-6 w-full h-full">
