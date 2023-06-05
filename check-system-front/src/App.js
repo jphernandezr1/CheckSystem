@@ -1,7 +1,7 @@
 import "./index.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Tables_page from "./pages/tables_page";
-import Table_page from "./pages/table_page";
+import Tablespage from "./pages/tables_page";
+import Tablepage from "./pages/table_page";
 import Nav from "./pages/nav";
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <Nav/>
         <Routes>
-          <Route exact path="/" element={<Tables_page/>} />
-          <Route exact path="table/:tableId" element={<Table_page/>} />
+          <Route exact path="/" element={<Tablespage/>} />
+          <Route exact path="table/:tableId" element={<Tablepage/>} />
           <Route path="*" element="Not Found" />
         </Routes>
     </BrowserRouter>

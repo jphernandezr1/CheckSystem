@@ -3,7 +3,7 @@ import "../index.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-function Tables_page() {
+function Tablespage() {
   const [tab, setTab] = useState([]);
   const [tables, setTables] = useState([]);
   const [showForm, setShowForm] = useState(false);
@@ -167,4 +167,4 @@ function Tables_page() {
   );
 }
 
-export default Tables_page;
+export default Tablespage;

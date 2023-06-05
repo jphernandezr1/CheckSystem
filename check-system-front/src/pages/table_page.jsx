@@ -6,7 +6,7 @@ import Clients from "../components/clients";
 import Checkgen from "../components/checkgen";
 import Check from "../components/check";
 
-function Table_page() {
+function Tablepage() {
   const { tableId } = useParams();
   const [tip, setTip] = useState(0);
   const [showTip, setShowTip] = useState(false);
@@ -302,4 +302,4 @@ function Table_page() {
   );
 }
 
-export default Table_page;
+export default Tablepage;
