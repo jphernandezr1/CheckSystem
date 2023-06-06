@@ -14,6 +14,7 @@ function Tablepage() {
   const [showCheck, setShowCheck] = useState(false);
   const [checkgen, setcheck] = useState([]);
   const [clients, setUsers] = useState([]);
+
   const headers = {
     "Content-Type": "application/json",
     "x-hasura-admin-secret":
@@ -105,6 +106,10 @@ function Tablepage() {
   const handleCheck = () => {
     setShowCheck(!showCheck);
   };
+  const handleCheckClose = () => {
+    setShowCheck(!showCheck);
+    window.location.href = '/';
+    };
 
   useEffect(() => {
     gettable();
@@ -143,7 +148,7 @@ function Tablepage() {
           <div className="py-2 h-[5.0vh]">
             <button
               type="button"
-              onClick={handleCheck}
+              onClick={handleCheckClose}
               className="bg-gray-300 px-4 py-2 rounded"
             >
               Close
