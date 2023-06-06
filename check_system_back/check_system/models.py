@@ -1,4 +1,5 @@
 from django.db import models
+from decimal import Decimal
 
 class Table(models.Model):
     id = models.UUIDField(primary_key=True)
@@ -10,4 +11,6 @@ class Table(models.Model):
     active=models.BooleanField()
 
     def __str__(self):
-        return '{}'.format(self.name)
+        return '{}'.format(self.num_mesa)
+    class Meta:
+        db_table = 'table'
