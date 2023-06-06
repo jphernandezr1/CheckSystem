@@ -3,9 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import firebase from "firebase";
+import { initializeApp } from 'firebase/app';
 
-firebase.initializeApp({
+
+initializeApp({
   apiKey: "AIzaSyBWmf3U_JX9VEuhlT4mcGc3I63Bi_b2Zzo",
   authDomain: "split-my-bill-app.firebaseapp.com",
   projectId: "split-my-bill-app",
