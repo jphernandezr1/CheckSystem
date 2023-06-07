@@ -33,6 +33,6 @@ python manage.py test
 or if you want to see the coverga results use the following commando from the source folder:
 open htmlcov/index.html 
 
-For testing with the real database, you must make the petitions in Postman. As the Postman collection is located in the same folder called postman.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date.
+For testing with postman and the real database, you must make the petitions in Postman. You can use the Postman collection which is located in the same folder called postman.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date, as is indicated in the postman, the delete will only delete the non active tables.
 
 
