@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -70,21 +71,24 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'check_system_back.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-  'default': {
-    'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'postgres_db',
-    'USER': 'juanpis1944',
-    'PASSWORD': 'x09OYDNQWPpE',
-    'HOST': 'ep-odd-thunder-561965.us-east-2.aws.neon.tech',
-    'PORT': '5432',
-  }
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres_db',
+        'USER': 'juanpis1944',
+        'PASSWORD': 'x09OYDNQWPpE',
+        'HOST': 'ep-odd-thunder-561965.us-east-2.aws.neon.tech',
+        'PORT': '5432',
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        
+    },
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -127,4 +131,3 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 USE_TZ = False
-
