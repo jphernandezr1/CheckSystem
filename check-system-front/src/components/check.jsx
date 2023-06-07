@@ -27,7 +27,12 @@ function Check(props) {
         headers: headers,
       }
     );
-    settip(response.data["update_clients"].returning[0].total_tip)
+    if (response === undefined || response === null){
+      settip("$0.0")
+    }
+    else{
+      settip(response.data["update_clients"].returning[0].total_tip)
+    }
     };
    
   useEffect(() => {
