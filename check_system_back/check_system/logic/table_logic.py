@@ -14,11 +14,13 @@ def get_table(fecha_in, fecha_fin):
     tip_tot=0
     check_tot=0
     total_pay=0
-    for element in table:
-        tip_tot += float(convertir(element.Total_tip))
-        check_tot += float(convertir(element.Total_cuenta)) 
-        total_pay += float(convertir(element.Total_paid))
-    header={'total_paid':"$"+str(total_pay.__round__(2)), 'total_checks':"$"+str(check_tot.__round__(2)), 'total_tips': "$"+str(tip_tot.__round__(2))}
+    header={'total_paid':"$0.0", 'total_checks':"$0.0", 'total_tips': "$0.0"}
+    if len(table)>0:
+        for element in table:
+            tip_tot += float(convertir(element.Total_tip))
+            check_tot += float(convertir(element.Total_cuenta)) 
+            total_pay += float(convertir(element.Total_paid))
+        header={'total_paid':"$"+str(total_pay.__round__(2)), 'total_checks':"$"+str(check_tot.__round__(2)), 'total_tips': "$"+str(tip_tot.__round__(2))}
     return table,header
 
 def delete_table(fecha_in, fecha_fin):

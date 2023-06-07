@@ -27,7 +27,10 @@ Python manage.py runserver
 
 That way, the back server will be running by default at the address localhost:8080.
 
-To run and try the test, you must run
+To run and try the test, you must run from the source folder:
+python manage.py test
+or if you want to see the coverga results use the following commando from the source folder:
+open htmlcov/index.html 
 
 For testing with the real database, you must make the petitions in Postman. As the Postman collection is located in the same folder called postman.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date.
 
