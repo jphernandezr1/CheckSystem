@@ -24,7 +24,6 @@ For the back, you must be sure of having installed Python 3.5 or later, and then
 In the command prompt execute pip install django, then you will navigate to the source folder CHECKSYSTEM and run the following commands in the command prompt or terminal:
 cd check_system_back
 pip install -r requirements.txt
-python manage.py migrate
 Python manage.py runserver
 
 That way, the back server will be running by default at the address localhost:8080.
