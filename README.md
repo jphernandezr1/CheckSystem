@@ -1,6 +1,6 @@
 # CheckSystem
 
-For practical purposes the services are published in cloud solution, for the fron in react is located in firebase at: https://split-my-bill-app.web.app and for the back is running in GAE(Google App Engine) at: 
+For practical purposes the services are published in cloud solution, for the fron in react is located in firebase at: https://split-my-bill-app.web.app and for the back is running in GAE(Google App Engine) at: https://split-my-bill-389102.uc.r.appspot.com/.
 
 ## Front in React
 
@@ -33,6 +33,6 @@ python manage.py test
 or if you want to see the coverga results use the following commando from the source folder:
 open htmlcov/index.html 
 
-For testing with postman and the real database, you must make the petitions in Postman. You can use the Postman collection which is located in the same folder called postman.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date, as is indicated in the postman, the delete will only delete the non active tables.
+For testing with postman and the real database, you must make the petitions in Postman. You can use the Postman collection which is located in the same folder called Check-System-Collection.postman_collection.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date, as is indicated in the postman, the delete will only delete the non active tables.
 
 

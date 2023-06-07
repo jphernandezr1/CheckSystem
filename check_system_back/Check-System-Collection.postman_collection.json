@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "44ff0697-1a29-45bf-b6fb-b7c25add5cbc",
+		"name": "Check-System-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19568698",
+		"_collection_link": "https://www.postman.com/satellite-geoscientist-50440965/workspace/my-workspace/collection/19568698-44ff0697-1a29-45bf-b6fb-b7c25add5cbc?action=share&creator=19568698&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Get_tables_date",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://split-my-bill-389102.uc.r.appspot.com/service/?fecha_in=2023-06-01&fecha_fin=2023-06-08",
+					"protocol": "https",
+					"host": [
+						"split-my-bill-389102",
+						"uc",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"service",
+						""
+					],
+					"query": [
+						{
+							"key": "fecha_in",
+							"value": "2023-06-01"
+						},
+						{
+							"key": "fecha_fin",
+							"value": "2023-06-08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete_tables_date",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fecha_in\":\"2023-06-01\",\n    \"fecha_fin\":\"2023-06-06\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://split-my-bill-389102.uc.r.appspot.com/service/",
+					"protocol": "https",
+					"host": [
+						"split-my-bill-389102",
+						"uc",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"service",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
