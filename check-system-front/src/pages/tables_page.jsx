@@ -52,7 +52,7 @@ function Tablespage() {
   const createTable = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
+      await axios.post(
         "https://dashing-squirrel-63.hasura.app/api/rest/table",
         {
             num_mesa: parseInt(e.target.elements.tableNumber.value)
@@ -61,7 +61,6 @@ function Tablespage() {
             headers: headers,
         }
       );
-      console.log(response);
     } catch (error) {
       console.log(error);
     }

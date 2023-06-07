@@ -15,7 +15,8 @@ npm start
 
 You don't have to enable a backend because this app is connected to hasura.io, a graphQL application that allows you to transform, extract, and manage information in a database, in this case a database created in neon.tech, so you don't have to worry about other dependencies when running this web app.
 
-For testing the app
+For testing the app from the source code you have to run npm run test and the test will run automatically.
+To see the coverage of the test  npm test -- --coverage --watchAll or if you want to see the created report you should run open coverage/lcov-report/index.html if you are in windows just replace the open for start.
 
 ## Back in django
 
@@ -31,7 +32,7 @@ That way, the back server will be running by default at the address localhost:80
 To run and try the test, you must run from the source folder:
 python manage.py test
 or if you want to see the coverga results use the following commando from the source folder:
-open htmlcov/index.html 
+open htmlcov/index.html if you are in windows just replace the open for start.
 
 For testing with postman and the real database, you must make the petitions in Postman. You can use the Postman collection which is located in the same folder called Check-System-Collection.postman_collection.json, you have to create the request for the GET and DELETE with the body indicating the Begin_date and Finish_date, as is indicated in the postman, the delete will only delete the non active tables.
 
