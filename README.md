@@ -2,6 +2,8 @@
 
 For practical purposes the services are published in cloud solution, for the fron in react is located in firebase at: https://split-my-bill-app.web.app and for the back is running in GAE(Google App Engine) at: https://split-my-bill-389102.uc.r.appspot.com/.
 
+Finally I created a video to show the product I created https://www.loom.com/share/16134564121b40c093d10c64a1700fdf.
+
 ## Front in React
 
 At first, you must be sure to have node.js installed in your system and the npm package manager installed. Then, you have to navigate in a command prompt to your source folder called CHECKSYSTEM, and then you have to run to the following commands from the main folder:
