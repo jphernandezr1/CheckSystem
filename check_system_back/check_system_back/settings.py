@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-iibob=@-c7fg1ktghsclhq*!@ha_gbwqyem@hjk&e7n8ezk=!g
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['split-my-bill-389102.uc.r.appspot.com']
 
 
 # Application definition
